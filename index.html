@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f3">
+<title>A Little Birthday Surprise 🌷</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #713c4a;
+  text-align: center;
+  background: linear-gradient(160deg, #fff7f0, #ffe5ed, #fff5f0);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  width: min(100% - 28px, 620px);
+  margin: auto;
+  padding: 30px 0 45px;
+}
+
+.tulips {
+  font-size: clamp(35px, 9vw, 57px);
+  letter-spacing: 4px;
+  margin: 10px 0 18px;
+  animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font: 11px Arial, sans-serif;
+  color: #b66a80;
+}
+
+h1 {
+  font-size: clamp(37px, 9vw, 62px);
+  line-height: 1.13;
+  margin: 15px 0;
+  color: #a94462;
+  font-weight: normal;
+}
+
+h1 span {
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 0 8px;
+}
+
+.card {
+  background: rgba(255,255,255,0.75);
+  border: 1px solid #f4cbd5;
+  border-radius: 22px;
+  padding: 24px 20px;
+  margin: 22px 0;
+  box-shadow: 0 8px 30px rgba(160, 76, 102, 0.08);
+}
+
+h2 {
+  color: #a94462;
+  font-size: 25px;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.message {
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+button {
+  background: #b64f6d;
+  color: white;
+  border: none;
+  padding: 13px 21px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 7px 3px;
+  font-family: Arial, sans-serif;
+  transition: transform .2s, background .2s;
+}
+
+button:hover {
+  background: #963c58;
+  transform: translateY(-2px);
+}
+
+.secondary {
+  background: #f4d4dc;
+  color: #79394c;
+}
+
+.secondary:hover {
+  background: #ebbdca;
+}
+
+#secret {
+  display: none;
+  background: #fff5f7;
+  border-radius: 14px;
+  padding: 17px;
+  margin-top: 17px;
+  line-height: 1.9;
+  animation: appear .5s ease;
+}
+
+#secret.show {
+  display: block;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.player {
+  background: #fff8fa;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #f3d6df;
+}
+
+#musicStatus {
+  font: 12px Arial, sans-serif;
+  color: #986174;
+  margin-top: 9px;
+}
+
+.footer {
+  font-size: 13px;
+  line-height: 2;
+  color: #a36b7c;
+  margin-top: 28px;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: floatUp 7s linear forwards;
+  z-index: -1;
+  opacity: .55;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  main { width: calc(100% - 22px); }
+  .card { padding: 21px 15px; }
+  .message { font-size: 15px; }
+  button { max-width: 100%; }
+}
+</style>
+</head>
+
+<body>
+<main>
+
+  <div class="tulips">🌷 🌷 🌷</div>
+
+  <p class="eyebrow">A little surprise made just for you</p>
+
+  <!-- CHANGE THE NAME BELOW -->
+  <h1>Happy Birthday,<br><span id="personName">My Favourite Person</span> ♡</h1>
+
+  <p class="subtitle">
+    A little page, a little music, a few tulips,
+    and a whole lot of love for your special day.
+  </p>
+
+  <section class="card">
+    <div style="font-size:34px">🎂 💌 🎀</div>
+    <h2>A birthday wish for you</h2>
+
+    <p class="message">
+      Happy Birthday to someone who deserves all the beautiful
+      things this world has to offer. 🌸
+      <br><br>
+      May your days be filled with genuine smiles, peaceful moments,
+      beautiful surprises, and people who make your heart happy.
+      May every dream you carry find its way towards becoming real.
+      <br><br>
+      If I could give you one thing today, it would be the ability
+      to see yourself through the eyes of the people who care about
+      you. You would understand just how special you truly are.
+      <br><br>
+      Keep being your lovely self. I hope this new chapter brings
+      you countless reasons to smile. You deserve happiness today
+      and on every ordinary day that follows. 💗
+    </p>
+
+    <div class="tulips">🌷</div>
+    <p><i>With lots of love, always ♡</i></p>
+  </section>
+
+  <section class="card">
+    <h2>🎵 A little song for you</h2>
+    <p class="subtitle">Press play and enjoy your little surprise.</p>
+
+    <div class="player">
+      <div style="font-size:28px">🎧 ♡ 🎶</div>
+      <p style="margin-bottom:8px">Your birthday soundtrack</p>
+
+      <audio id="birthdaySong" controls preload="metadata"
+             style="width:100%">
+        Your browser does not support audio.
+      </audio>
+
+      <div id="musicStatus">
+        Add your song file using the instructions below.
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>A tiny secret for you 🤫</h2>
+    <p class="subtitle">
+      There is something I wanted to tell you...
+    </p>
+
+    <button id="secretButton" type="button"
+            onclick="toggleSecret()">
+      Open your secret message 💌
+    </button>
+
+    <div id="secret">
+      <div style="font-size:30px">💗 🌷 💗</div>
+
+      <p class="message">
+        You are more special than words can explain.
+        Some people make life a little brighter simply by being
+        part of it, and you are one of those people.
+        <br><br>
+        No matter how busy life gets or how much things change,
+        I hope you always remember that you matter and that
+        you deserve the kind of happiness that feels like home.
+        <br><br>
+        This little website is just a small reminder of that.
+        Happy Birthday, once again. ♡
+      </p>
+
+      <p>🌷 A little secret, just for you 🌷</p>
+    </div>
+  </section>
+
+  <div class="tulips">🌷 🌷 🌷</div>
+
+  <p class="footer">
+    Made with love, a little pink magic, and tulips.<br>
+    May your year bloom beautifully. ♡
+  </p>
+
+</main>
+
+<script>
+function toggleSecret() {
+  const secret = document.getElementById("secret");
+  const button = document.getElementById("secretButton");
+
+  secret.classList.toggle("show");
+
+  button.textContent = secret.classList.contains("show")
+    ? "Close your secret message 💗"
+    : "Open your secret message 💌";
+}
+
+const song = document.getElementById("birthdaySong");
+const statusText = document.getElementById("musicStatus");
+
+/*
+  The song file should be in the same folder as index.html.
+*/
+song.src = "./birthday-song.mp3";
+
+song.addEventListener("loadedmetadata", () => {
+  statusText.textContent = "Your song is ready. Press play ♡";
+});
+
+song.addEventListener("error", () => {
+  statusText.textContent =
+    "Song not found. Add birthday-song.mp3 beside index.html.";
+});
+
+song.addEventListener("play", () => {
+  statusText.textContent = "Enjoy your song! ♡";
+});
+
+song.addEventListener("pause", () => {
+  if (!song.ended) {
+    statusText.textContent = "Paused — press play whenever you like.";
+  }
+});
+
+song.addEventListener("ended", () => {
+  statusText.textContent = "Hope you enjoyed the song! 🌷";
+});
+
+// Gentle floating hearts
+const heartSymbols = ["♡", "♥", "🌷"];
+
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent =
+    heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+
+  heart.style.left = Math.random() * 95 + "vw";
+  heart.style.fontSize = (15 + Math.random() * 15) + "px";
+  heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 11000);
+}, 1300);
+
+// OPTIONAL: Personalize the name by changing personName above.
+</script>
+</body>
+</html>
